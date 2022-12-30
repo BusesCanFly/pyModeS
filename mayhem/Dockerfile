@@ -5,6 +5,8 @@ RUN apt-get update
 ADD . /src
 WORKDIR /src
 
+RUN python3 -m pip install poetry
+RUN python3 -m pip install cython
 RUN python3 -m pip install -U pyModeS
 RUN chmod +x /src/mayhem/fuzz-pymodes.py
 
