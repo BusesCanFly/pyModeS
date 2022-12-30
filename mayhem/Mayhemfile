@@ -1,0 +1,8 @@
+project: pymodes
+target: fuzz-pymodes
+
+image: ghcr.io/busescanfly/pymodes:latest
+
+cmds:
+  - cmd: /src/mayhem/fuzz-pymodes.py
+    libfuzzer: true
